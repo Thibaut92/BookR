@@ -1,6 +1,7 @@
 require_relative "boot"
 
 require "rails/all"
+require "devise"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -14,6 +15,10 @@ module BookR
       generate.helper false
       generate.test_framework :test_unit, fixture: false
     end
+    # Configuration de la langue par défaut
+    config.i18n.default_locale = :fr
+    config.i18n.available_locales = [:fr]
+    
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 8.0
 

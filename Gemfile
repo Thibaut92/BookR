@@ -47,16 +47,26 @@ gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
 
+# API Integration
+gem "stripe"
+gem "money-rails"
+gem "httparty" # Pour l'API SIRENE
+
+# UI Components
+gem "tom-select-rails" # Pour l'autocomplétion
+
+# Search and Admin
+gem "activeadmin" # Alternative à rails_admin compatible avec Rails 8
+gem "pg_search"
+
+# Background Jobs
+gem "sidekiq"
+gem "redis"
+
 group :development, :test do
-  gem "dotenv-rails"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
-
-  # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
-  gem "brakeman", require: false
-
-  # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
-  gem "rubocop-rails-omakase", require: false
+  gem "debug", platforms: %i[ mri windows ]
+  gem "dotenv-rails"
 end
 
 group :development do

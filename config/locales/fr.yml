@@ -1,0 +1,76 @@
+fr:
+  activerecord:
+    models:
+      user: "Utilisateur"
+      meeting: "Rendez-vous"
+    attributes:
+      user:
+        email: "Adresse email"
+        password: "Mot de passe"
+        password_confirmation: "Confirmation du mot de passe"
+        remember_me: "Se souvenir de moi"
+        current_password: "Mot de passe actuel"
+      meeting:
+        start_time: "Heure de début"
+        end_time: "Heure de fin"
+        notes: "Notes"
+        location: "Lieu"
+        meeting_type: "Type de rendez-vous"
+        types:
+          initial: "Premier contact"
+          followup: "Suivi"
+          presentation: "Présentation"
+  
+  errors:
+    messages:
+      not_saved:
+        one: "1 erreur a empêché l'enregistrement de cet %{resource} :"
+        other: "%{count} erreurs ont empêché l'enregistrement de cet %{resource} :"
+      blank: "ne peut pas être vide"
+      confirmation: "ne correspond pas"
+      taken: "est déjà utilisé"
+      too_short: "est trop court (minimum %{count} caractères)"
+      invalid: "n'est pas valide"
+      
+  devise:
+    sessions:
+      signed_in: "Connexion réussie."
+      signed_out: "Déconnexion réussie."
+      already_signed_out: "Déconnexion réussie."
+    passwords:
+      send_instructions: "Vous allez recevoir un email avec les instructions pour réinitialiser votre mot de passe."
+      updated: "Votre mot de passe a été modifié avec succès."
+      no_token: "Vous ne pouvez pas accéder à cette page sans passer par un email de réinitialisation de mot de passe."
+    registrations:
+      signed_up: "Bienvenue ! Vous vous êtes inscrit avec succès."
+      updated: "Votre compte a été modifié avec succès."
+    failure:
+      invalid: "Email ou mot de passe incorrect."
+      not_found_in_database: "Email ou mot de passe incorrect."
+      unauthenticated: "Vous devez vous connecter ou vous inscrire pour continuer."
+      
+  meetings:
+    created: "Le rendez-vous a été créé avec succès."
+    updated: "Le rendez-vous a été modifié avec succès."
+    destroyed: "Le rendez-vous a été supprimé avec succès."
+    error: "Une erreur est survenue lors de la sauvegarde du rendez-vous."
+    
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%e %b"
+      long: "%e %B %Y"
+    day_names: [dimanche, lundi, mardi, mercredi, jeudi, vendredi, samedi]
+    abbr_day_names: [dim, lun, mar, mer, jeu, ven, sam]
+    month_names: [~, janvier, février, mars, avril, mai, juin, juillet, août, septembre, octobre, novembre, décembre]
+    abbr_month_names: [~, jan., fév., mar., avr., mai, juin, juil., août, sept., oct., nov., déc.]
+    order:
+      - :day
+      - :month
+      - :year
+
+  time:
+    formats:
+      default: "%d/%m/%Y %H:%M"
+      short: "%H:%M"
+      long: "%A %e %B %Y %H:%M"

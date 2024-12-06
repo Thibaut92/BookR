@@ -1,0 +1,106 @@
+<div class="container py-4">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="h3 mb-0">
+              Rendez-vous du <%= l @meeting.start_time, format: :long %>
+            </h1>
+            
+            <div class="btn-group">
+              <%= link_to edit_meeting_path(@meeting), class: "btn btn-outline-primary" do %>
+                <i class="bi bi-pencil me-1"></i>Modifier
+              <% end %>
+              <%= button_to meeting_path(@meeting), 
+                  method: :delete, 
+                  class: "btn btn-outline-danger",
+                  data: { confirm: "Êtes-vous sûr de vouloir supprimer ce rendez-vous ?" } do %>
+                <i class="bi bi-trash me-1"></i>Supprimer
+              <% end %>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Informations générales</h5>
+                  <ul class="list-unstyled mb-0">
+                    <li class="mb-2">
+                      <strong>Type :</strong> 
+                      <%= case @meeting.meeting_type
+                          when 'initial' then 'Premier contact'
+                          when 'followup' then 'Suivi'
+                          when 'presentation' then 'Présentation'
+                          end %>
+                    </li>
+                    <li class="mb-2">
+                      <strong>Début :</strong> 
+                      <%= l @meeting.start_time, format: :long %>
+                    </li>
+                    <li class="mb-2">
+                      <strong>Fin :</strong> 
+                      <%= l @meeting.end_time, format: :long %>
+                    </li>
+                    <li class="mb-2">
+                      <strong>Durée :</strong>
+                      <%= distance_of_time_in_words(@meeting.start_time, @meeting.end_time) %>
+                    </li>
+                    <li>
+                      <strong>Lieu :</strong>
+                      <%= @meeting.location.presence || "Non spécifié" %>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Participants</h5>
+                  <div class="mb-3">
+                    <strong>Industriel :</strong>
+                    <p class="mb-2">
+                      <%= @meeting.industrial.company_name %>
+                      <small class="text-muted d-block">
+                        <%= @meeting.industrial.email %>
+                      </small>
+                    </p>
+                  </div>
+                  <div>
+                    <strong>Maître d'œuvre :</strong>
+                    <p class="mb-0">
+                      <%= @meeting.project_manager.company_name %>
+                      <small class="text-muted d-block">
+                        <%= @meeting.project_manager.email %>
+                      </small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <% if @meeting.notes.present? %>
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Notes</h5>
+                    <p class="card-text mb-0"><%= @meeting.notes %></p>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+
+          <div class="mt-4">
+            <%= link_to meetings_path, class: "btn btn-outline-secondary" do %>
+              <i class="bi bi-arrow-left me-1"></i>Retour au calendrier
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

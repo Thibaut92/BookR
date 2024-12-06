@@ -1,0 +1,53 @@
+<%= form_with(model: meeting) do |f| %>
+  <% if meeting.errors.any? %>
+    <div class="alert alert-danger">
+      <h4><%= pluralize(meeting.errors.count, "erreur") %> :</h4>
+      <ul>
+        <% meeting.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= f.label :meeting_type, "Type de rendez-vous", class: "form-label" %>
+    <%= f.select :meeting_type, 
+        { "Premier contact" => "initial", 
+          "Suivi" => "followup", 
+          "Présentation" => "presentation" }, 
+        {}, 
+        class: "form-select" %>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="mb-3">
+        <%= f.label :start_time, "Date et heure de début", class: "form-label" %>
+        <%= f.datetime_local_field :start_time, class: "form-control" %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="mb-3">
+        <%= f.label :end_time, "Date et heure de fin", class: "form-label" %>
+        <%= f.datetime_local_field :end_time, class: "form-control" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :location, "Lieu", class: "form-label" %>
+    <%= f.text_field :location, class: "form-control", placeholder: "Adresse ou lien visio" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :notes, "Notes", class: "form-label" %>
+    <%= f.text_area :notes, class: "form-control", rows: 3, 
+        placeholder: "Informations complémentaires pour le rendez-vous..." %>
+  </div>
+
+  <div class="d-flex justify-content-between">
+    <%= link_to "Annuler", meetings_path, class: "btn btn-outline-secondary" %>
+    <%= f.submit "Enregistrer", class: "btn btn-primary" %>
+  </div>
+<% end %>
