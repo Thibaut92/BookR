@@ -19,7 +19,7 @@ puts "Creating users..."
 industrial = User.create!(
   email: "industrial@example.com",
   password: "password",
-  company_name: "Industrial Corp",
+  company_name: "Industrie Française SA",
   siret: "12345678901234",
   phone: "0123456789",
   account_type: "industrial",

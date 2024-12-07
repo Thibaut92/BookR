@@ -43,6 +43,9 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_06_225000) do
     t.string "company_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "business_category"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["siret"], name: "index_users_on_siret", unique: true

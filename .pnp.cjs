@@ -27,12 +27,24 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
+          ["@fortawesome/fontawesome-free", "npm:6.7.1"],\
           ["@fullcalendar/core", "npm:6.1.15"],\
           ["@fullcalendar/daygrid", "virtual:c6081fcf7a8337e96e620db68560af8c841711c884aaf05ddce57f5aaa31459525daeba030a0f9b4ca3d8f363c414382636f30b43ba7852ffee5271f36ce5b06#npm:6.1.15"],\
           ["@fullcalendar/interaction", "virtual:c6081fcf7a8337e96e620db68560af8c841711c884aaf05ddce57f5aaa31459525daeba030a0f9b4ca3d8f363c414382636f30b43ba7852ffee5271f36ce5b06#npm:6.1.15"],\
-          ["@fullcalendar/timegrid", "virtual:c6081fcf7a8337e96e620db68560af8c841711c884aaf05ddce57f5aaa31459525daeba030a0f9b4ca3d8f363c414382636f30b43ba7852ffee5271f36ce5b06#npm:6.1.15"]\
+          ["@fullcalendar/timegrid", "virtual:c6081fcf7a8337e96e620db68560af8c841711c884aaf05ddce57f5aaa31459525daeba030a0f9b4ca3d8f363c414382636f30b43ba7852ffee5271f36ce5b06#npm:6.1.15"],\
+          ["@popperjs/core", "npm:2.11.8"],\
+          ["bootstrap", "virtual:c6081fcf7a8337e96e620db68560af8c841711c884aaf05ddce57f5aaa31459525daeba030a0f9b4ca3d8f363c414382636f30b43ba7852ffee5271f36ce5b06#npm:5.3.3"]\
         ],\
         "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@fortawesome/fontawesome-free", [\
+      ["npm:6.7.1", {\
+        "packageLocation": "../../../.yarn/berry/cache/@fortawesome-fontawesome-free-npm-6.7.1-5d74150140-10c0.zip/node_modules/@fortawesome/fontawesome-free/",\
+        "packageDependencies": [\
+          ["@fortawesome/fontawesome-free", "npm:6.7.1"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@fullcalendar/core", [\
@@ -112,17 +124,51 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@popperjs/core", [\
+      ["npm:2.11.8", {\
+        "packageLocation": "../../../.yarn/berry/cache/@popperjs-core-npm-2.11.8-f1692e11a0-10c0.zip/node_modules/@popperjs/core/",\
+        "packageDependencies": [\
+          ["@popperjs/core", "npm:2.11.8"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["BookR", [\
       ["workspace:.", {\
         "packageLocation": "./",\
         "packageDependencies": [\
           ["BookR", "workspace:."],\
+          ["@fortawesome/fontawesome-free", "npm:6.7.1"],\
           ["@fullcalendar/core", "npm:6.1.15"],\
           ["@fullcalendar/daygrid", "virtual:c6081fcf7a8337e96e620db68560af8c841711c884aaf05ddce57f5aaa31459525daeba030a0f9b4ca3d8f363c414382636f30b43ba7852ffee5271f36ce5b06#npm:6.1.15"],\
           ["@fullcalendar/interaction", "virtual:c6081fcf7a8337e96e620db68560af8c841711c884aaf05ddce57f5aaa31459525daeba030a0f9b4ca3d8f363c414382636f30b43ba7852ffee5271f36ce5b06#npm:6.1.15"],\
-          ["@fullcalendar/timegrid", "virtual:c6081fcf7a8337e96e620db68560af8c841711c884aaf05ddce57f5aaa31459525daeba030a0f9b4ca3d8f363c414382636f30b43ba7852ffee5271f36ce5b06#npm:6.1.15"]\
+          ["@fullcalendar/timegrid", "virtual:c6081fcf7a8337e96e620db68560af8c841711c884aaf05ddce57f5aaa31459525daeba030a0f9b4ca3d8f363c414382636f30b43ba7852ffee5271f36ce5b06#npm:6.1.15"],\
+          ["@popperjs/core", "npm:2.11.8"],\
+          ["bootstrap", "virtual:c6081fcf7a8337e96e620db68560af8c841711c884aaf05ddce57f5aaa31459525daeba030a0f9b4ca3d8f363c414382636f30b43ba7852ffee5271f36ce5b06#npm:5.3.3"]\
         ],\
         "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["bootstrap", [\
+      ["npm:5.3.3", {\
+        "packageLocation": "../../../.yarn/berry/cache/bootstrap-npm-5.3.3-da08e2f0fe-10c0.zip/node_modules/bootstrap/",\
+        "packageDependencies": [\
+          ["bootstrap", "npm:5.3.3"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:c6081fcf7a8337e96e620db68560af8c841711c884aaf05ddce57f5aaa31459525daeba030a0f9b4ca3d8f363c414382636f30b43ba7852ffee5271f36ce5b06#npm:5.3.3", {\
+        "packageLocation": "./.yarn/__virtual__/bootstrap-virtual-dd8cb7a611/4/.yarn/berry/cache/bootstrap-npm-5.3.3-da08e2f0fe-10c0.zip/node_modules/bootstrap/",\
+        "packageDependencies": [\
+          ["bootstrap", "virtual:c6081fcf7a8337e96e620db68560af8c841711c884aaf05ddce57f5aaa31459525daeba030a0f9b4ca3d8f363c414382636f30b43ba7852ffee5271f36ce5b06#npm:5.3.3"],\
+          ["@popperjs/core", "npm:2.11.8"],\
+          ["@types/popperjs__core", null]\
+        ],\
+        "packagePeers": [\
+          "@popperjs/core",\
+          "@types/popperjs__core"\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["preact", [\

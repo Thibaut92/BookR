@@ -5,6 +5,13 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
+"@fortawesome/fontawesome-free@npm:^6.7.1":
+  version: 6.7.1
+  resolution: "@fortawesome/fontawesome-free@npm:6.7.1"
+  checksum: 10c0/5bebf5f9684fc377fb7df36cf7ee37e112a8987e592228ac464b81edc0eb002e1fa8675977b82d15d304cda813da4fafbc38cf0c3ca2744c710390a58a460495
+  languageName: node
+  linkType: hard
+
 "@fullcalendar/core@npm:^6.1.15":
   version: 6.1.15
   resolution: "@fullcalendar/core@npm:6.1.15"
@@ -43,16 +50,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@popperjs/core@npm:^2.11.8":
+  version: 2.11.8
+  resolution: "@popperjs/core@npm:2.11.8"
+  checksum: 10c0/4681e682abc006d25eb380d0cf3efc7557043f53b6aea7a5057d0d1e7df849a00e281cd8ea79c902a35a414d7919621fc2ba293ecec05f413598e0b23d5a1e63
+  languageName: node
+  linkType: hard
+
 "BookR@workspace:.":
   version: 0.0.0-use.local
   resolution: "BookR@workspace:."
   dependencies:
+    "@fortawesome/fontawesome-free": "npm:^6.7.1"
     "@fullcalendar/core": "npm:^6.1.15"
     "@fullcalendar/daygrid": "npm:^6.1.15"
     "@fullcalendar/interaction": "npm:^6.1.15"
     "@fullcalendar/timegrid": "npm:^6.1.15"
+    "@popperjs/core": "npm:^2.11.8"
+    bootstrap: "npm:^5.3.3"
   languageName: unknown
   linkType: soft
+
+"bootstrap@npm:^5.3.3":
+  version: 5.3.3
+  resolution: "bootstrap@npm:5.3.3"
+  peerDependencies:
+    "@popperjs/core": ^2.11.8
+  checksum: 10c0/bb68ca7b763977b9cce40cb5b8c676ae19a716d2f5d15009fa7bdbcec9dea426968e3cb748fbed7592fbf10edd7c749aea841c2920996a7c1aa5e0a6e2d4c2ad
+  languageName: node
+  linkType: hard
 
 "preact@npm:~10.12.1":
   version: 10.12.1

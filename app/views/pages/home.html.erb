@@ -1,48 +1,11 @@
-<div class="container">
-  <div class="row align-items-center min-vh-100">
-    <div class="col-md-6">
-      <h1 class="display-4 mb-4">Bienvenue sur BookR</h1>
-      <p class="lead mb-4">
-        La plateforme qui simplifie la mise en relation entre industriels et maîtres d'œuvre.
-      </p>
-      
-      <% unless user_signed_in? %>
-        <div class="mb-4">
-          <h2 class="h4 mb-3">Vous êtes...</h2>
-          <div class="d-grid gap-3">
-            <%= link_to new_user_registration_path(account_type: 'industrial'), class: "btn btn-primary btn-lg" do %>
-              <i class="bi bi-building me-2"></i>Un Industriel
-            <% end %>
-            <%= link_to new_user_registration_path(account_type: 'project_manager'), class: "btn btn-outline-primary btn-lg" do %>
-              <i class="bi bi-person-workspace me-2"></i>Un Maître d'œuvre
-            <% end %>
-          </div>
-        </div>
-
-        <p class="text-muted">
-          Déjà inscrit ? <%= link_to "Connectez-vous", new_user_session_path, class: "text-decoration-none" %>
-        </p>
-      <% else %>
-        <div class="mb-4">
-          <h2 class="h4 mb-3">Que souhaitez-vous faire ?</h2>
-          <div class="d-grid gap-3">
-            <%= link_to meetings_path, class: "btn btn-primary btn-lg" do %>
-              <i class="bi bi-calendar-event me-2"></i>Gérer mes rendez-vous
-            <% end %>
-            <% if current_user.industrial? %>
-              <%= link_to "#", class: "btn btn-outline-primary btn-lg" do %>
-                <i class="bi bi-search me-2"></i>Rechercher un maître d'œuvre
-              <% end %>
-            <% end %>
-          </div>
-        </div>
-      <% end %>
-    </div>
-
-    <div class="col-md-6 d-none d-md-block">
-      <img src="https://source.unsplash.com/random/600x400/?architecture,construction" 
-           alt="Construction" 
-           class="img-fluid rounded shadow">
-    </div>
+<div class="hero">
+  <div class="container">
+    <h1>BookR</h1>
+    <p>Simplifiez vos rendez-vous professionnels</p>
+    
+    <form class="search-form">
+      <input type="text" placeholder="Rechercher un professionnel...">
+      <button type="submit">Rechercher</button>
+    </form>
   </div>
 </div>
